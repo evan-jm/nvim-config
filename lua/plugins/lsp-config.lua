@@ -20,6 +20,8 @@ return {
       local lspconfig = require("lspconfig")
       lspconfig.jdtls.setup({ capabilities = capabilities })
       lspconfig.lua_ls.setup({ capabilities = capabilities })
+      lspconfig.html.setup({ capabilities = capabilities })
+      lspconfig.tsserver.setup({ capabilities = capabilities })
     end
   },
 }
