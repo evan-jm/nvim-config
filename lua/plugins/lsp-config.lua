@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "jdtls", "lua_ls", "html", "tsserver" },
+        ensure_installed = { "jdtls", "lua_ls", "html", "tsserver", "intelephense" },
       })
     end
   },
@@ -23,6 +23,16 @@ return {
       lspconfig.html.setup({ capabilities = capabilities })
       lspconfig.tsserver.setup({ capabilities = capabilities })
       lspconfig.clangd.setup({ capabilities = capabilities })
+      lspconfig.intelephense.setup({ 
+        capabilities = capabilities,
+        settings = {
+          intelephense = {
+            files = {
+              maxSize = 500000;
+            },
+          },
+        }
+      })
     end
   },
 }
