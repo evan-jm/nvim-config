@@ -23,16 +23,7 @@ return {
       lspconfig.html.setup({ capabilities = capabilities })
       lspconfig.tsserver.setup({ capabilities = capabilities })
       lspconfig.clangd.setup({ capabilities = capabilities })
-      lspconfig.intelephense.setup({ 
-        capabilities = capabilities,
-        settings = {
-          intelephense = {
-            files = {
-              maxSize = 500000;
-            },
-          },
-        }
-      })
+      lspconfig.intelephense.setup({ capabilities = capabilities })
     end
   },
 }
